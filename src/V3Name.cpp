@@ -82,6 +82,7 @@ class NameVisitor final : public VNVisitorConst {
         VL_RESTORER(m_modp);
         {
             m_modp = nodep;
+            renameKeywordCheck(nodep);
             iterateChildrenConst(nodep);
         }
     }
